@@ -60,4 +60,9 @@ io.on("connection", socket => {
     });
 });
 
-server.listen(process.env.PORT || 5000, () => console.log("Server running"));
+// server.listen(process.env.PORT || 5000, () => console.log("Server running"));
+
+server.listen(process.env.PORT || 5000, "10.0.0.6", () => {
+    console.log("Server running on port", process.env.PORT || 5000);
+  });
+  
